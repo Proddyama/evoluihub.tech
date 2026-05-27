@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvoluiHub - Produtos Digitais que Transformam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0a0a0f;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
+            z-index: -1;
+            animation: bgPulse 10s ease-in-out infinite;
+        }
+
+        @keyframes bgPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn-login {
+            padding: 10px 25px;
+            background: transparent;
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .btn-login:hover {
+            background: #00ffff;
+            color: #0a0a0f;
+            box-shadow: 0 0 25px #00ffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 5% 50px;
+            gap: 50px;
+            position: relative;
+        }
+
+        .hero-content {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255, 0, 255, 0.1);
+            border: 1px solid #ff00ff;
+            border-radius: 30px;
+            color: #ff00ff;
+            font-size: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 255, 0.3); }
+            50% { box-shadow: 0 0 35px rgba(255, 0, 255, 0.6); }
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #00ffff 0%, #ff00ff 50%, #8a2be2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #b0b0c0;
+            margin-bottom: 35px;
+            line-height: 1.6;
+            max-width: 550px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 16px 40px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            color: #0a0a0f;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(255, 0, 255, 0.8);
+        }
+
+        .btn-secondary {
+            padding: 16px 40px;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: #00ffff;
+            color: #00ffff;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 
+                0 0 60px rgba(0, 255, 255, 0.4),
+                0 0 100px rgba(255, 0, 255, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 5%;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        }
+
+        .stat-label {
+            color: #b0b0c0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 8px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #b0b0c0;
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(255, 0, 255, 0.05));
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #8a2be2, #00ffff);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s;
+            background-size: 400% 400%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 255, 255, 0.3);
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+            filter: drop-shadow(0 0 15px #00ffff);
+        }
+
+        .product-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .product-card p {
+            color: #b0b0c0;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .product-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .price {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #00ffff;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .btn-buy {
+            padding: 10px 25px;
+            background: linear-gradient(90deg, #ff00ff, #8a2be2);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+        }
+
+        .btn-buy:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 5%;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(138, 43, 226, 0.2), transparent 70%);
+        }
+
+        .cta h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cta p {
+            color: #b0b0c0;
+            font-size: 18px;
+            margin-bottom: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 5%;
+            background: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+            text-align: center;
+            color: #b0b0c0;
+        }
+
+        footer a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+            }
+            .hero h1 { font-size: 40px; }
+            nav ul { display: none; }
+            .section-title { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">EVOLUI<span style="color:#ff00ff">HUB</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button class="btn-login">Entrar</button>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-badge">⚡ Plataforma #1 em Produtos Digitais</span>
+            <h1>Evolua seu Negócio Digital</h1>
+            <p>Descubra produtos digitais premium que vão revolucionar seu negócio. Cursos, e-books, templates e ferramentas para acelerar seus resultados.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">🚀 Começar Agora</button>
+                <button class="btn-secondary">▶ Ver Demo</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80" alt="Produtos Digitais">
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stat-item">
+            <div class="stat-number">+50K</div>
+            <div class="stat-label">Clientes Ativos</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">+200</div>
+            <div class="stat-label">Produtos</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Satisfação</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Suporte</div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="produtos">
+        <h2 class="section-title">Produtos em Destaque</h2>
+        <p class="section-subtitle">Soluções digitais para impulsionar seu sucesso</p>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">📚</div>
+                <h3>E-book Premium</h3>
+                <p>Guia completo com estratégias avançadas para dominar o mercado digital.</p>
+                <div class="product-price">
+                    <span class="price">R$ 47</span>
+                    <button class="btn-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🎓</div>
+                <h3>Curso Completo</h3>
+                <p>Aprenda do zero ao avançado com aulas práticas e certificado incluso.</p>
+                <div class="product-price">
+                    <span class="price">R$ 197</span>
+                    <button class="btn-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🎨</div>
+                <h3>Pack de Templates</h3>
+                <p>Mais de 100 templates profissionais editáveis para suas redes sociais.</p>
+                <div class="product-price">
+                    <span class="price">R$ 67</span>
+                    <button class="btn-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">⚙️</div>
+                <h3>Ferramentas Pro</h3>
+                <p>Kit de ferramentas digitais para automatizar e escalar seu negócio.</p>
+                <div class="product-price">
+                    <span class="price">R$ 127</span>
+                    <button class="btn-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">💎</div>
+                <h3>Mentoria VIP</h3>
+                <p>Acompanhamento exclusivo com especialistas para acelerar seus resultados.</p>
+                <div class="product-price">
+                    <span class="price">R$ 497</span>
+                    <button class="btn-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🚀</div>
+                <h3>Combo Master</h3>
+                <p>Tudo que você precisa em um só lugar. O pacote mais completo da plataforma.</p>
+                <div class="product-price">
+                    <span class="price">R$ 297</span>
+                    <button class="btn-buy">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Pronto para Evoluir?</h2>
+        <p>Junte-se a milhares de pessoas que já transformaram seus resultados com a EvoluiHub.</p>
+        <button class="btn-primary">Quero Começar Agora ⚡</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <a href="https://evoluihub.tech">EvoluiHub.tech</a> - Todos os direitos reservados</p>
+        <p style="margin-top:10px;font-size:13px">Feito com 💜 para transformar negócios digitais</p>
+    </footer>
+
+</body>
+</html>
