@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-book Grátis | 36 Alimentos Nutritivos</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
+  :root{
+    --verde:#0d8a7a;
+    --verde-claro:#13a896;
+    --escuro:#0d5a4f;
+    --amarelo:#ffd34d;
+  }
+  body{background:#f3faf8;color:#16352e;line-height:1.65;}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(160deg,#0d8a7a 0%,#13a896 55%,#0d8a7a 100%);
+    color:#fff;text-align:center;padding:70px 20px 90px;position:relative;
+  }
+  .hero .selo{
+    display:inline-block;background:var(--amarelo);color:#6b4e00;
+    font-size:13px;font-weight:700;padding:7px 18px;border-radius:30px;margin-bottom:20px;
+  }
+  .hero h1{font-size:32px;font-weight:800;max-width:600px;margin:0 auto 16px;line-height:1.25;}
+  .hero p{font-size:17px;opacity:.95;max-width:520px;margin:0 auto 30px;}
+  .hero .capa-ebook{
+    width:200px;border-radius:14px;box-shadow:0 15px 40px rgba(0,0,0,.35);
+    margin-top:10px;transform:rotate(-3deg);
+  }
+
+  /* BOTÃO */
+  .btn{
+    display:inline-block;background:var(--amarelo);color:var(--escuro);
+    font-size:17px;font-weight:800;padding:18px 38px;border-radius:50px;
+    text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.22);
+    transition:transform .15s;animation:pulse 1.7s infinite;
+  }
+  .btn:active{transform:scale(.96);}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(255,211,77,.6);}
+    70%{box-shadow:0 0 0 16px rgba(255,211,77,0);}
+    100%{box-shadow:0 0 0 0 rgba(255,211,77,0);}
+  }
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px;}
+
+  /* SEÇÃO */
+  section{padding:55px 0;}
+  .titulo-sec{text-align:center;font-size:26px;font-weight:800;color:var(--verde);margin-bottom:14px;}
+  .sub-sec{text-align:center;color:#557;max-width:560px;margin:0 auto 35px;font-size:16px;}
+
+  /* CARDS BENEFÍCIOS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+  .card{
+    background:#fff;border-radius:16px;padding:26px 22px;text-align:center;
+    box-shadow:0 6px 20px rgba(13,138,122,.10);border:1px solid #e3efe8;
+  }
+  .card .icone{font-size:38px;margin-bottom:12px;}
+  .card h3{font-size:17px;color:var(--escuro);margin-bottom:8px;}
+  .card p{font-size:14px;color:#667;}
+
+  /* LISTA CONTEUDO */
+  .conteudo{background:#fff;border-radius:18px;padding:34px 30px;box-shadow:0 6px 20px rgba(13,138,122,.10);border:1px solid #e3efe8;}
+  .conteudo ul{list-style:none;}
+  .conteudo li{padding:11px 0 11px 36px;position:relative;font-size:15px;border-bottom:1px solid #f0f6f3;}
+  .conteudo li:last-child{border-bottom:none;}
+  .conteudo li::before{content:"✅";position:absolute;left:0;top:11px;}
+
+  /* CTA FINAL */
+  .cta-final{
+    background:linear-gradient(160deg,#0d8a7a,#13a896);color:#fff;
+    text-align:center;border-radius:22px;padding:50px 28px;margin:20px auto 0;
+  }
+  .cta-final h2{font-size:25px;margin-bottom:12px;font-weight:800;}
+  .cta-final p{opacity:.95;margin-bottom:28px;font-size:16px;}
+
+  .aviso{
+    background:#fff8e6;border-left:5px solid #f0ad4e;color:#7a5b00;
+    font-size:13px;padding:16px 20px;border-radius:0 10px 10px 0;margin:40px auto 0;
+  }
+
+  footer{text-align:center;font-size:12px;color:#889;padding:35px 20px 50px;line-height:1.6;}
+
+  @media(max-width:480px){
+    .hero h1{font-size:25px;}
+    .btn{font-size:16px;padding:16px 30px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <span class="selo">🎁 E-BOOK 100% GRATUITO</span>
+  <h1>36 Alimentos Nutritivos para uma Vida Mais Saudável</h1>
+  <p>Um guia prático e leve com os alimentos que mais ajudam na saciedade, na energia e no bem-estar do seu dia a dia. 🌿</p>
+  <br>
+  <a class="btn" href="https://drive.google.com/file/d/1PX5iQe-JtQoNxENoSvOTrpjGfN32ig36/view?usp=sharing">⬇️ Quero baixar grátis agora</a>
+  <br><br>
+  <!-- Troque o src por uma imagem da capa do e-book, se tiver -->
+  <img class="capa-ebook" src="36 ALIMENTOS NUTRITIVOS.png" alt="Capa do E-book">
+</header>
+
+<!-- ===== O QUE É ===== -->
+<section>
+  <div class="wrap">
+    <h2 class="titulo-sec">📖 Sobre o E-book</h2>
+    <p class="sub-sec">
+      Esqueça dietas radicais e promessas milagrosas. Este e-book foi feito para
+      quem quer descobrir, de forma simples e empática, como pequenas escolhas
+      no prato fazem uma grande diferença na saúde e na disposição.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icone">🥗</div>
+        <h3>36 Alimentos</h3>
+        <p>Lista prática com alimentos nutritivos, saborosos e fáceis de incluir na rotina.</p>
+      </div>
+      <div class="card">
+        <div class="icone">💡</div>
+        <h3>Dicas Reais</h3>
+        <p>Como preparar e combinar os alimentos para mais saciedade e equilíbrio.</p>
+      </div>
+      <div class="card">
+        <div class="icone">💚</div>
+        <h3>Sem Pressão</h3>
+        <p>Conteúdo leve, positivo e responsável — focado em hábitos, não em balança.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== O QUE VOCÊ VAI APRENDER ===== -->
+<section style="background:#eef7f3;">
+  <div class="wrap">
+    <h2 class="titulo-sec">✨ O que você vai encontrar</h2>
+    <div class="conteudo">
+      <ul>
+        <li>Como o corpo armazena energia e por que cada pessoa é única</li>
+        <li>Por que dietas restritivas costumam falhar (e o que fazer no lugar)</li>
+        <li>10 alimentos que ajudam na saciedade e no bem-estar</li>
+        <li>26 alimentos nutritivos para variar o seu dia a dia</li>
+        <li>Dicas de preparo leves e saborosas para cada um deles</li>
+        <li>Um checklist motivacional para manter a constância</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARA QUEM É ===== -->
+<section>
+  <div class="wrap">
+    <h2 class="titulo-sec">👀 Para quem é este e-book?</h2>
+    <p class="sub-sec">
+      Para você que quer emagrecer com leveza, melhorar a alimentação,
+      ter mais energia ou simplesmente construir uma relação mais saudável
+      e tranquila com a comida. 🌿
+    </p>
+  </div>
+</section>
+
+<!-- ===== DOWNLOAD ===== -->
+<section id="download">
+  <div class="wrap">
+    <div class="cta-final">
+      <h2>📥 Baixe seu e-book agora!</h2>
+      <p>Comece hoje mesmo a sua jornada por uma vida mais saudável. É grátis e o download é imediato!</p>
+      <!-- TROQUE O LINK ABAIXO PELO LINK REAL DO SEU PDF -->
+      <a class="btn" href="https://drive.google.com/file/d/1PX5iQe-JtQoNxENoSvOTrpjGfN32ig36/view?usp=sharing" target="_blank" download>
+        ⬇️ Baixar e-book grátis
+      </a>
+    </div>
+
+    <div class="aviso">
+      ⚠️ <strong>Aviso:</strong> Este material é informativo e educativo. Não substitui
+      o acompanhamento de um nutricionista ou médico. Antes de mudar sua alimentação,
+      consulte um profissional de saúde. Os resultados variam de pessoa para pessoa.
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Viver Melhor Todo Dia • @vivermelhortodoodia 🌿<br>
+  Conteúdo gratuito de apoio ao bem-estar e à alimentação consciente.
+</footer>
+
+</body>
+</html>
